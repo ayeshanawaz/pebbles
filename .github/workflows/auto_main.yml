@@ -32,7 +32,7 @@ jobs:
       uses: Borales/actions-yarn@v2.3.0
       with:
     # Yarn command
-<<<<<<< HEAD
+
     cmd: install
   - name: creating build
     run: npm build
@@ -43,12 +43,3 @@ jobs:
 
 - name: deploying on surge
   run: surge ./build https://snowie.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
-=======
-        cmd: install
-    - name: creating build
-      run:  yarn build
-    - name: installing surge
-      run: npm install --g surge
-    - name: deploy on surge
-      run: surge ./build http://snowie-lilly.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
->>>>>>> 2d34a1341522fdd4e01a517697e55adce4dfe9b7
